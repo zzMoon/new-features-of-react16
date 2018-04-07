@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const User = ({ user }) => (<div>name: {user.name}</div>);
+const Profile = ({ user }) => (<div>name: {user.name}</div>);
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -12,23 +12,24 @@ class ErrorBoundary extends Component {
   componentDidCatch(err, info) {
     console.log(err, info);
     this.setState({ hasError: true });
+    // sendErrorReport(err, info);
   }
 
   render() {
     if (this.state.hasError) {
-      return <div>出错了!</div>;
+      return <div>Oops, something went wrong!</div>;
     }
 
     return this.props.children;
   }
 }
 
-class App extends Component {
+class MyApp extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      user: { name: 'xiaoming' },
+      user: { name: 'wangshijun' },
     };
   }
 
@@ -40,7 +41,7 @@ class App extends Component {
     return (
       <div>
         <ErrorBoundary>
-          <User user={this.state.user} />
+          <Profile user={this.state.user} />
         </ErrorBoundary>
         <button onClick={this.onClick.bind(this)}>Update</button>
       </div>
@@ -48,4 +49,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default MyApp;

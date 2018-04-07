@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // const Test = ({ value }) => <span>{`hello ${value}`}</span>;
 const Test = ({ value }) => `hello ${value}`;
 
-class App extends Component {
+class MyApp extends Component {
   render() {
     return (
       <div>
@@ -13,4 +13,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default MyApp;

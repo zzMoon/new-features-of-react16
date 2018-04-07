@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 
 const Arrs = () => [
+  <li key="1">1</li>,
+  <li key="2">2</li>,
   <li key="3">3</li>,
   <li key="4">4</li>,
 ];
 
-class App extends Component {
+class MyApp extends Component {
   render() {
     return [
       <ul>
-        <li key="1">1</li>
-        <li key="2">2</li>
+        <li>test1</li>
+        <li>test2</li>
         <Arrs />
       </ul>,
+      <div>3423</div>,
+      <p>dfasdf</p>,
     ];
   }
 }
 
-export default App;
+export default MyApp;
