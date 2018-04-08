@@ -36,16 +36,16 @@ class MyApp extends Component {
     this.setState({ user: null });
   }
 
-  componentDidCatch(err, info) {
-    console.log('---------------');
-    console.log(err, info);
-    this.setState({ hasError: true });
-  }
+  // componentDidCatch(err, info) {
+  //   console.log('---------------');
+  //   console.log(err, info);
+  //   this.setState({ hasError: true });
+  // }
 
   render() {
-    if (this.state.hasError) {
-      return '出错了！！';
-    }
+    // if (this.state.hasError) {
+    //   return '出错了！！';
+    // }
     // 如果没有出错就正常渲染
     return (
       <div>

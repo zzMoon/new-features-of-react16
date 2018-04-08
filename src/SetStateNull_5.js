@@ -46,13 +46,18 @@ class App extends Component {
     // this.state.name !== newValue && this.setState({ name: newValue });
 
     // react 16 新方法
-    this.setState((state) => {
-      if (state.name === newValue) {
-        return null;
-      }
+    if (this.state.name === newValue) {
+      this.setState(null);
+    } else {
+      this.setState({ name: newValue });
+    }
+    // this.setState((state) => {
+    //   if (state.name === newValue) {
+    //     return null;
+    //   }
 
-      return { name: newValue };
-    });
+    //   return { name: newValue };
+    // });
   }
 
   render() {
