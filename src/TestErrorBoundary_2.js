@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const User = ({ user }) => <p className="red">name: {user.name}</p>;
 
 // ErrorBoundary 公共组件
-class ErrorBoundary extends Component {
+/*class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -19,7 +19,7 @@ class ErrorBoundary extends Component {
 
     return this.props.children;
   }
-}
+}*/
 
 class MyApp extends Component {
   constructor(props) {
@@ -49,7 +49,7 @@ class MyApp extends Component {
     // 如果没有出错就正常渲染
     return (
       <div>
-        <ErrorBoundary><User user={this.state.user} /></ErrorBoundary>
+        <User user={this.state.user} />
         <button onClick={this.handleOnClick}>点击</button>
       </div>
     );
