@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 // 第一种方式
-/*class MyApp extends Component {
+class MyApp extends Component {
   constructor(props) {
     super(props);
 
@@ -20,10 +20,10 @@ import ReactDOM from 'react-dom';
       </div>
     );
   }
-}*/
+}
 
-// 蒙层
-class Mask extends Component {
+// 弹框
+/*class Dialog extends Component {
   constructor(props) {
     super(props);
 
@@ -39,8 +39,8 @@ class Mask extends Component {
 
   render() {
     return ReactDOM.createPortal(
-      <div className="mask">
-        <span className="mask-close" onClick={this.props.onClose}>x</span>
+      <div className="dialog">
+        <span className="dialog-close" onClick={this.props.onClose}>x</span>
         {this.props.children}
       </div>,
       this.container
@@ -53,28 +53,28 @@ class MyApp extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { activeMask: false };
-    this.closeMask = this.closeMask.bind(this);
-    this.showMask = this.showMask.bind(this);
+    this.state = { activeDialog: false };
+    this.closeDialog = this.closeDialog.bind(this);
+    this.showDialog = this.showDialog.bind(this);
   }
 
-  closeMask() {
-    this.setState({ activeMask: false });
+  closeDialog() {
+    this.setState({ activeDialog: false });
   }
 
-  showMask() {
-    this.setState({ activeMask: true });
+  showDialog() {
+    this.setState({ activeDialog: true });
   }
 
   render() {
     return (
       <div>
         <h2>Portals（挂载方式）</h2>
-        {this.state.activeMask && <Mask onClose={this.closeMask}>mask</Mask>}
-        <button onClick={this.showMask}>show</button>
+        {this.state.activeDialog && <Dialog onClose={this.closeDialog}>dialog</Dialog>}
+        <button onClick={this.showDialog}>show</button>
       </div>
     );
   }
-}
+}*/
 
 export default MyApp;
