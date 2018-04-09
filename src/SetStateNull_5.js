@@ -40,17 +40,17 @@ class App extends Component {
 
   selectContainer(e) {
     const newValue = e.target.value;
-    // this.setState({ name: newValue });
+    this.setState({ name: newValue });
 
     // 老版本方法
     // this.state.name !== newValue && this.setState({ name: newValue });
 
     // react 16 新方法
-    if (this.state.name === newValue) {
-      this.setState(null);
-    } else {
-      this.setState({ name: newValue });
-    }
+    // if (this.state.name === newValue) {
+    //   this.setState(null);
+    // } else {
+    //   this.setState({ name: newValue });
+    // }
     // this.setState((state) => {
     //   if (state.name === newValue) {
     //     return null;
