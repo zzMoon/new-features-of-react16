@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 // 第一种方式
-class MyApp extends Component {
+/*class MyApp extends Component {
   constructor(props) {
     super(props);
 
@@ -20,10 +20,10 @@ class MyApp extends Component {
       </div>
     );
   }
-}
+}*/
 
 // 弹框
-/*class Dialog extends Component {
+class Dialog extends Component {
   constructor(props) {
     super(props);
 
@@ -75,6 +75,6 @@ class MyApp extends Component {
       </div>
     );
   }
-}*/
+}
 
 export default MyApp;
